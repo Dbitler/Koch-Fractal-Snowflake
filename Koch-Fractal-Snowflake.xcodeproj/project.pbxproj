@@ -14,6 +14,12 @@
 		AB8DE98529970A4B002D31A0 /* Koch_Fractal_SnowflakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE98429970A4B002D31A0 /* Koch_Fractal_SnowflakeTests.swift */; };
 		AB8DE98F29970A4B002D31A0 /* Koch_Fractal_SnowflakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE98E29970A4B002D31A0 /* Koch_Fractal_SnowflakeUITests.swift */; };
 		AB8DE99129970A4B002D31A0 /* Koch_Fractal_SnowflakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE99029970A4B002D31A0 /* Koch_Fractal_SnowflakeUITestsLaunchTests.swift */; };
+		AB8DE99E29970A84002D31A0 /* KochView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE99D29970A84002D31A0 /* KochView.swift */; };
+		AB8DE99F29970A84002D31A0 /* KochView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE99D29970A84002D31A0 /* KochView.swift */; };
+		AB8DE9A029970A84002D31A0 /* KochView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE99D29970A84002D31A0 /* KochView.swift */; };
+		AB8DE9A229970AA3002D31A0 /* Koch_Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE9A129970AA3002D31A0 /* Koch_Functions.swift */; };
+		AB8DE9A329970AA3002D31A0 /* Koch_Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE9A129970AA3002D31A0 /* Koch_Functions.swift */; };
+		AB8DE9A429970AA3002D31A0 /* Koch_Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8DE9A129970AA3002D31A0 /* Koch_Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,8 @@
 		AB8DE98A29970A4B002D31A0 /* Koch-Fractal-SnowflakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Koch-Fractal-SnowflakeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8DE98E29970A4B002D31A0 /* Koch_Fractal_SnowflakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koch_Fractal_SnowflakeUITests.swift; sourceTree = "<group>"; };
 		AB8DE99029970A4B002D31A0 /* Koch_Fractal_SnowflakeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Koch_Fractal_SnowflakeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AB8DE99D29970A84002D31A0 /* KochView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KochView.swift; sourceTree = "<group>"; };
+		AB8DE9A129970AA3002D31A0 /* Koch_Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Koch_Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +103,8 @@
 		AB8DE97129970A4A002D31A0 /* Koch-Fractal-Snowflake */ = {
 			isa = PBXGroup;
 			children = (
+				AB8DE9A129970AA3002D31A0 /* Koch_Functions.swift */,
+				AB8DE99D29970A84002D31A0 /* KochView.swift */,
 				AB8DE97229970A4A002D31A0 /* Koch_Fractal_SnowflakeApp.swift */,
 				AB8DE97429970A4A002D31A0 /* ContentView.swift */,
 				AB8DE97629970A4B002D31A0 /* Assets.xcassets */,
@@ -259,7 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8DE9A229970AA3002D31A0 /* Koch_Functions.swift in Sources */,
 				AB8DE97529970A4A002D31A0 /* ContentView.swift in Sources */,
+				AB8DE99E29970A84002D31A0 /* KochView.swift in Sources */,
 				AB8DE97329970A4A002D31A0 /* Koch_Fractal_SnowflakeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8DE9A329970AA3002D31A0 /* Koch_Functions.swift in Sources */,
 				AB8DE98529970A4B002D31A0 /* Koch_Fractal_SnowflakeTests.swift in Sources */,
+				AB8DE99F29970A84002D31A0 /* KochView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8DE9A429970AA3002D31A0 /* Koch_Functions.swift in Sources */,
 				AB8DE99129970A4B002D31A0 /* Koch_Fractal_SnowflakeUITestsLaunchTests.swift in Sources */,
+				AB8DE9A029970A84002D31A0 /* KochView.swift in Sources */,
 				AB8DE98F29970A4B002D31A0 /* Koch_Fractal_SnowflakeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
