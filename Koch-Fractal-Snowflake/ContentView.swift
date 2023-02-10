@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Koch-Fractal-Snowflake
 //
-//  Created by IIT PHYS 440 on 2/10/23.
+//  Created by Daniel Bitler on 2/10/23.
 //
 
 import SwiftUI

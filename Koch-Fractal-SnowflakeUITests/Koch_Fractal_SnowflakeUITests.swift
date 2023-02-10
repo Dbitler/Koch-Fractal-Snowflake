@@ -2,7 +2,7 @@
 //  Koch_Fractal_SnowflakeUITests.swift
 //  Koch-Fractal-SnowflakeUITests
 //
-//  Created by IIT PHYS 440 on 2/10/23.
+//  Created by Daniel Bitler on 2/10/23.
 //
 
 import XCTest

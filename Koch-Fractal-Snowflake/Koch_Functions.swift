@@ -2,7 +2,7 @@
 //  Koch_Functions.swift
 //  Koch-Fractal
 //
-//  Created by IIT PHYS 440 on 2/10/23.
+//  Created by Daniel Bitler on 2/10/23.
 //
 
 import Foundation
