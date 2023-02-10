@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var guess = ""
     @State private var totalIterations: Int? = 1
-    @State private var cesaroAngle: Int? = 3
-    @State var editedCesaroAngle: Int? = 3
+    @State private var kochAngle: Int? = 3
+    @State var editedkochAngle: Int? = 3
     @State var editedTotalIterations: Int? = 1
     @State var viewArray :[AnyView] = []
     
@@ -29,7 +29,7 @@ struct ContentView: View {
             
             ZStack {
                 
-                KochView(iterationsFromParent: $totalIterations, angleFromParent: $cesaroAngle).drawingGroup()
+                KochView(iterationsFromParent: $totalIterations, angleFromParent: $kochAngle).drawingGroup()
                     
                 // Stop the window shrinking to zero.
                 Spacer()
@@ -54,8 +54,8 @@ struct ContentView: View {
 //
 //                    Text(verbatim: "Angle π/number:")
 //                    .padding()
-////                    TextField("The angle of the Fractal is π/number entered. Must be between 1 and 50.", value: $editedCesaroAngle, formatter: intFormatter, onCommit: {
-////                        self.cesaroAngle = self.editedCesaroAngle
+////                    TextField("The angle of the Fractal is π/number entered. Must be between 1 and 50.", value: $editedkochAngle, formatter: intFormatter, onCommit: {
+////                        self.kochAngle = self.editedkochAngle
 ////                    })
 ////
 ////                        .padding()

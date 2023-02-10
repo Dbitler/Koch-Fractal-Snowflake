@@ -32,14 +32,14 @@ struct KochView: View {
 
     }
     
-    /// createCesaroFractalShapeView
+    /// createkochFractalShapeView
     ///
     /// This function ensures that the program will not crash if non-valid input is accidentally entered by the user.
     ///
     /// - Parameters:
     ///   - iterations: number of iterations in the fractal
     ///   - piAngleDivisor: integer that sets the angle as pi/piAngleDivisor so if 2, then the angle is π/2
-    /// - Returns: View With Cesaro Fractal Shape
+    /// - Returns: View With koch Fractal Shape
     func createKochFractalShapeView(iterations: Int?, piAngleDivisor: Int?) -> some View {
         
             var newIterations :Int? = 0
@@ -73,9 +73,9 @@ struct KochView: View {
     
 }
 
-/// CesaroFractalShape
+/// kochFractalShape
 ///
-/// calculates the Shape displayed in the Cesaro Fractal View
+/// calculates the Shape displayed in the koch Fractal View
 ///
 /// - Parameters:
 ///   - iterations: number of iterations in the fractal
@@ -89,7 +89,7 @@ struct KochFractalShape: Shape {
     
     func path(in rect: CGRect) -> Path {
         
-        var CesaroPoints: [(xPoint: Double, yPoint: Double)] = []  ///Array of tuples
+        var kochPoints: [(xPoint: Double, yPoint: Double)] = []  ///Array of tuples
         
         var x: CGFloat = 0
         var y: CGFloat = 0
@@ -98,7 +98,9 @@ struct KochFractalShape: Shape {
         // draw from the center of our rectangle
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
         
-        // Offset from center in y-direction for Cesaro Fractal
+        // Offset from center in y-direction for koch Fractal
+        
+        //Finds the height of the original triangle, as well as the height of the smaller triange that is created on iteration 1, and adds them together, dividng them by 2 to find the total height of iteration 1, centering the shape in the bounding box
         let yoffset = ((size/(2.0*tan(30.0/180.0*Double.pi))) + (size/(6.0*tan(30.0/180.0*Double.pi)))) / 2
         
         x = center.x
@@ -112,20 +114,20 @@ struct KochFractalShape: Shape {
         
         guard piAngleDivisor <= 50 else {return Path()}
     
-        CesaroPoints = KochFractalCalculator(fractalnum: iterations, x: x, y: y, size: size, angleDivisor: piAngleDivisor)
+        kochPoints = KochFractalCalculator(fractalnum: iterations, x: x, y: y, size: size, angleDivisor: piAngleDivisor)
         
 
-        // Create the Path for the Cesaro Fractal
+        // Create the Path for the koch Fractal
         
         var path = Path()
          //bounding box has height of 600 px, iteration 1 of fractal has height of 519 px.
         // move to the initial position
-        path.move(to: CGPoint(x: CesaroPoints[0].xPoint, y: CesaroPoints[0].yPoint))
+        path.move(to: CGPoint(x: kochPoints[0].xPoint, y: kochPoints[0].yPoint))
 
         // loop over all our points to draw create the paths
-        for item in 1..<(CesaroPoints.endIndex)  {
+        for item in 1..<(kochPoints.endIndex)  {
         
-            path.addLine(to: CGPoint(x: CesaroPoints[item].xPoint, y: CesaroPoints[item].yPoint))
+            path.addLine(to: CGPoint(x: kochPoints[item].xPoint, y: kochPoints[item].yPoint))
             
             
             }
@@ -139,7 +141,7 @@ struct KochFractalShape: Shape {
 
 
 
-struct CesaroView_Previews: PreviewProvider {
+struct kochView_Previews: PreviewProvider {
     
     @State static var iterations :Int? = 2
     @State static var angle :Int? = 4
